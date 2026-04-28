@@ -1,0 +1,90 @@
+site_name: "Mastering Pivotal Cloud Foundry (PCF) & cf4k8s"
+site_description: Comprehensive hands-on learning guide for PCF/cf4k8s - from foundations to advanced deployment patterns
+repo_url: https://github.com/yourusername/pcf-learning
+edit_uri: edit/main/docs
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    - scheme: light
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - navigation.instant
+    - content.code.annotate
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Introduction:
+    - Overview: 00-introduction/01-overview.md
+    - Why PCF: 00-introduction/02-why-pcf.md
+    - Learning Path: 00-introduction/03-learning-path.md
+  - Foundations:
+    - Cloud Computing Basics: 01-foundations/01-cloud-basics.md
+    - Container Orchestration: 01-foundations/02-container-orchestration.md
+    - Platform as a Service: 01-foundations/03-paas.md
+  - Core Concepts:
+    - PCF Architecture: 02-core-concepts/01-architecture.md
+    - Apps and Buildpacks: 02-core-concepts/02-apps-buildpacks.md
+    - "Services & Service Broker": 02-core-concepts/03-services.md
+    - "Routing & Networking": 02-core-concepts/04-routing.md
+    - "Scaling & Availability": 02-core-concepts/05-scaling.md
+  - Local Setup:
+    - Prerequisites: 03-setup-local/01-prerequisites.md
+    - Installing cf4k8s: 03-setup-local/02-install-cf4k8s.md
+    - Configuring CLI: 03-setup-local/03-cli-setup.md
+    - Verification Steps: 03-setup-local/04-verification.md
+  - Deployment Patterns:
+    - Blue-Green Deployments: 04-deployment-patterns/01-blue-green.md
+    - Canary Releases: 04-deployment-patterns/02-canary.md
+    - Service Discovery: 04-deployment-patterns/03-service-discovery.md
+    - "Health Checks & Auto-Healing": 04-deployment-patterns/04-health-checks.md
+  - Advanced Topics:
+    - Resource Management: 05-advanced-topics/01-resource-management.md
+    - "Security & RBAC": 05-advanced-topics/02-security.md
+    - "Logging & Monitoring": 05-advanced-topics/03-logging-monitoring.md
+    - Custom Buildpacks: 05-advanced-topics/04-custom-buildpacks.md
+    - Service Brokers: 05-advanced-topics/05-service-brokers.md
+  - Hands-On Labs:
+    - Lab 1 - Deploy First App: 06-labs/01-deploy-first-app.md
+    - Lab 2 - Scaling & Availability: 06-labs/02-scaling-availability.md
+    - Lab 3 - Service Binding: 06-labs/03-service-binding.md
+    - Lab 4 - Blue-Green Deployment: 06-labs/04-blue-green-lab.md
+    - Lab 5 - Custom Buildpack: 06-labs/05-custom-buildpack.md
+    - Lab 6 - Monitoring & Logging: 06-labs/06-monitoring-lab.md
+  - PCF vs Cloud Providers:
+    - vs AWS: 07-pcf-vs-cloud-providers/01-vs-aws.md
+    - vs Azure: 07-pcf-vs-cloud-providers/02-vs-azure.md
+    - vs GCP: 07-pcf-vs-cloud-providers/03-vs-gcp.md
+    - Comparison Matrix: 07-pcf-vs-cloud-providers/04-comparison-matrix.md
+  - Reference:
+    - CF CLI Commands: 08-reference/01-cli-commands.md
+    - Manifest Reference: 08-reference/02-manifest-reference.md
+    - Troubleshooting: 08-reference/03-troubleshooting.md
+    - Resources & Links: 08-reference/04-resources.md
